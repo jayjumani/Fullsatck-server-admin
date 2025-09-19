@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 
 app.use(cors({
-  origin: "http://localhost:3000", // allow React app
+  origin: process.env.CLIENT_URL || "*",  // allow React app //again changed due to deployment on render
   credentials: true,
 }));
 
